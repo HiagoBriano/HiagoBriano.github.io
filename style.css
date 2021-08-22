@@ -4,11 +4,14 @@
 
 body {
     background-color: aqua;
+    position: absolute;
+    left: 5%;
+    right: 5%;
 }
 
 h1 {
     font-family: Rampart One;
-    
+
 }
 
 p {
