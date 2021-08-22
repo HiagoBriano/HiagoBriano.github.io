@@ -7,14 +7,27 @@ body {
     position: absolute;
     left: 5%;
     right: 5%;
+    margin-top: 1%;
 }
 
-h1 {
+#nome {
     font-family: Rampart One;
+    text-align: center;
 
 }
 
-p {
+img {
+    max-width:150px;
+    padding: 3px;
+    background-color: antiquewhite;
+}
+
+.apresentacao {
+    font-family: Rampart One;
+    font-size: 25px;
+}
+
+.apresentacao p {
     font-family: Styles;
     font-size: 20px;
 }
@@ -41,4 +54,8 @@ p {
 
 .f {
     font-size: 30px;
+}
+
+.habilidades li:nth-child(odd) {
+ text-transform: uppercase;
 }
