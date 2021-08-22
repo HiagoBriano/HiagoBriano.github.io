@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
+body {
+    background-color: aqua;
+}
+
+h1 {
+    font-family: Rampart One;
+    
+}
+
+p {
+    font-family: Styles;
+    font-size: 20px;
+}
+
+.a {
+    font-size: 30px;
+}
+
+.b {
+    font-size: 20px;
+}
+
+.c {
+    font-size: 15px;
+}
+
+.d {
+    font-size: 15px;
+}
+
+.e {
+    font-size: 20px;
+}
+
+.f {
+    font-size: 30px;
+}
