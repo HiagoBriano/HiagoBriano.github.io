@@ -44,6 +44,8 @@ function botaoNovaTarefa (){
     let evento2 = event.target;
 
     // varifica todas as classes que tem na tarefa clicada
+    // tirei a ideia da lista de classes do site:
+    // https://qastack.com.br/programming/5898656/check-if-an-element-contains-a-class-in-javascript
     let vericaClasse = evento2.classList;
     let classe1 = vericaClasse[0];
     let classe2 = vericaClasse[1];
@@ -61,3 +63,28 @@ function botaoNovaTarefa (){
   
 }
 
+
+// Limpar a lista
+let selecionandoOl = document.querySelector('ol');
+let apagaTudo = document.getElementById('apaga-tudo');
+apagaTudo.addEventListener('click', apagar);
+
+function apagar (){
+  selecionandoOl.innerHTML = "";
+}
+
+// Limpar tarefas marcadas
+let removerFinalizados = document.getElementById('remover-finalizados');
+removerFinalizados.addEventListener('click', apagarMarcados);
+
+function apagarMarcados (){
+  let marcados = document.getElementsByClassName('completed');
+  let quantidadeMarcados = marcados.length;
+  
+  for (let i = 0; i <= quantidadeMarcados; i += 1){
+    marcados[0].remove();
+
+    // Remove aprendido no site:
+    // https://pt.stackoverflow.com/questions/4605/remover-elemento-da-p%C3%A1gina-com-javascript
+  }
+}
