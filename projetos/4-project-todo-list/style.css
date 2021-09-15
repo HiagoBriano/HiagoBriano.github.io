@@ -5,3 +5,13 @@
 .completed {
   text-decoration: line-through;
 }
+
+#rodape {
+  background-color: rgb(203, 228, 135);
+  color: rgb(12, 41, 66);
+  font-size: 20px;
+  text-align: center;
+  position:absolute;
+  bottom:0;
+  width:99%;
+}
