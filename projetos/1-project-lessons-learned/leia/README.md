@@ -1,16 +1,4 @@
-## Requisitos
 
-### Dicas
-
-Para fazer este projeto você deverá atribuir a barra superior o `position: fixed;`. Leia mais sobre ele [aqui](https://www.w3schools.com/css/css_positioning.asp).
-
-Para colocar sua página no [GitHub Pages](https://pages.github.com/), não é necessário remover o conteúdo que já está lá, você pode apenas adicionar essa nova página. Para isso, todo o conteúdo desse projeto deve ser colocado em uma pasta `/projetos/lessons-learned`.
-
-### Lista de requisitos
-
-⚠️ Leia-os atentamente e siga à risca o que for pedido. Em particular, **atente-se para os nomes de _ids_ que alguns elementos de seu projeto devem possuir**. ⚠️
-
-O não cumprimento de um requisito, total ou parcialmente, impactará em sua avaliação.
 
 ### 1. Adicione uma cor de fundo específica para a página
 

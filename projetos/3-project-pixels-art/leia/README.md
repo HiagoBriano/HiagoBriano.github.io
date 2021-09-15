@@ -1,8 +1,3 @@
-## Requisitos Obrigatórios:
-
-Neste projeto, você implementará um editor de arte com pixels.
-
-**Ou seja, dada uma paleta de cores e um quadro composto por pixels, você vai permitir que quem usa consiga pintar o que quiser no quadro!** 👩‍🎨
 
 ### 1 - Adicione à página o título "Paleta de Cores".
 
