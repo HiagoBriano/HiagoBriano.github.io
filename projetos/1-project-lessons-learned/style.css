@@ -53,5 +53,11 @@ nav, #rodape {
   color: rgb(12, 41, 66);
   font-size: 20px;
   text-align: center;
+}
+
+#rodape {
+  margin: auto;
+  bottom: 0px;
+  position: fixed;
   width: 100%;
 }
