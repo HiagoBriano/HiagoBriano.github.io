@@ -1,5 +1,9 @@
 body {
-  background-color: aqua;
+  background-image: url("fundo.jpg");
+  background-repeat: no-repeat;
+  background-size: 1000% 1000%;
+  background
+  padding: 0 30% 0 30%;
 }
 
 header {
@@ -10,14 +14,33 @@ p {
   font-size: 20px;
 }
 
+
 table {
-  
-  
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
 }
 
 #center {
   display: flex;
-  justify-content: center;
   border: 3px solid black ;
   border-radius: 20px 20px 20px 20px;
+  flex-direction: column;
+}
+
+.numero {
+  width: 60px;
+}
+
+.data {
+  width: 110px;
+}
+
+.nome {
+  width: 200px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }
