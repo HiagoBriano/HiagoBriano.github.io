@@ -5,31 +5,38 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projeto Todo List</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Minha Lista de Tarefas</h1>
-    <p id="funcionamento" >Clique duas vezes em um item para marcá-lo como completo</p>
+  <header class="text-center">
+    <h1 class="blockquote">Minha Lista de Tarefas</h1>
+    <p id="funcionamento" class="blockquote-footer">Clique duas vezes em um item para marcá-lo como completo</p>
   </header>
+  <div class="centralizar">
+    <!-- Onde a nova tarefa sera digitada -->
+    <div class="input-group mb-3">
+      <input type="text" id="texto-tarefa" placeholder="Digite aqui a nova tarefa" class="form-control">
 
-  <!-- Onde a nova tarefa sera digitada -->
-  <input type="text" id="texto-tarefa" placeholder="Digite aqui a nova tarefa">
+      <!-- Botão para adicionar as tarefas -->
+      <button id="criar-tarefa" class="btn btn-outline-primary">adicionar</button>
+    </div>
 
-  <!-- Botão para adicionar as tarefas -->
-  <button id="criar-tarefa">adicionar</button>
+    <div>
+      <!-- ficara a lista de tarefas do usuario -->
+      <ol id="lista-tarefas">
 
-  <!-- ficara a lista de tarefas do usuario -->
-  <ol id="lista-tarefas">
+      </ol>
 
-  </ol>
+      <!-- Botão para apagar tudo -->
+      <button id="apaga-tudo" class="btn btn-outline-danger">Limpar lista</button>
 
-  <!-- Botão para apagar tudo -->
-  <button id="apaga-tudo">Limpar lista</button>
-
-  <!-- Limpar tarefas marcadas -->
-  <button id="remover-finalizados">Remover finalizados</button>
+      <!-- Limpar tarefas marcadas -->
+      <button id="remover-finalizados" class="btn btn-outline-success">Remover finalizados</button>
+    </div>
+  </div>
 
   <br><br><br><br><br>
   <footer id="rodape">

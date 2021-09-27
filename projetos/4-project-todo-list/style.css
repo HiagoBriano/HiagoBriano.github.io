@@ -16,3 +16,21 @@
   bottom:0;
   position: fixed;
 }
+
+.text-center { 
+  padding-top: 30px;
+}
+
+.centralizar {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding-top: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
