@@ -1,13 +1,23 @@
-// import './App.css';
-import Header from "./Components/Header";
+import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import IndexPrincipal from './Pages/Principal/IndexPrincipal';
+import IndexProjeto12 from './Pages/FrontendOnlineStore/IndexProjeto12';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Header />
-      </header>
-    </div>
+    <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+              <IndexPrincipal />
+            </Route>
+
+            <Route path="/frontendonlinestore" exact>
+              <IndexProjeto12 />
+            </Route>
+        </Switch>
+    </BrowserRouter>
   );
 }
 
