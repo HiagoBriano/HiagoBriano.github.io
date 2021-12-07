@@ -1,12 +1,12 @@
-import { Component } from "react";
-import { BrowserRouter } from "react-router-dom";
-import { Route, Switch } from "react-router";
-import Principal from "./Pages/Principal";
+import { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import Principal from './Pages/Principal';
 
 export default class IndexProjeto12 extends Component {
-  componentDidMount() {
-    localStorage.clear();
-  }
+  // componentDidMount() {
+  //   localStorage.clear();
+  // }
 
   render() {
     return (

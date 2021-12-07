@@ -1,12 +1,12 @@
 export async function resultadoCategoriaPEsquisa() {
   // recupera valor do pesquisado
-  const query = localStorage.getItem("Input");
+  const query = localStorage.getItem('Input');
 
   // recupera a categoria
-  let categoryId = localStorage.getItem("idCategory");
+  let categoryId = localStorage.getItem('idCategory');
 
   if (categoryId) {
-    categoryId = categoryId.replace(/"/g, "");
+    categoryId = categoryId.replace(/"/g, '');
   }
 
   // faz a busca pelo campo de pesquisa e pelo id da categoria
@@ -14,15 +14,17 @@ export async function resultadoCategoriaPEsquisa() {
     `https://api.mercadolibre.com/sites/MLB/search?category=${categoryId}&q=${query}`
   );
 
-  // salva o resultado no local Storage
   const resultado = await response.json();
-  localStorage.setItem("resultadoPesquisa", JSON.stringify(resultado.results));
+  return resultado;
+
+  // salva o resultado no local Storage
+  // localStorage.setItem("resultadoPesquisa", JSON.stringify(resultado.results));
 }
 
 // buscar lista de categorias
 export async function listaCategorias() {
   const response = await fetch(
-    "https://api.mercadolibre.com/sites/MLB/categories"
+    'https://api.mercadolibre.com/sites/MLB/categories'
   );
   return response.json();
 }

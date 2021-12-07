@@ -1,7 +1,6 @@
-import { Component } from "react";
-import { listaCategorias } from "../API";
-import "../CSS/Categorias.css";
-import { resultadoCategoriaPEsquisa } from "../API";
+import { Component } from 'react';
+import { listaCategorias } from '../API';
+import '../CSS/Categorias.css';
 
 export default class Categorias extends Component {
   constructor() {
@@ -9,7 +8,6 @@ export default class Categorias extends Component {
 
     this.state = {
       resultadoCategoria: [],
-      idAtual: "",
     };
   }
 
@@ -27,25 +25,24 @@ export default class Categorias extends Component {
     const { value } = evento.target;
 
     // guarda o valor do input no local Storage
-    localStorage.setItem("idCategory", JSON.stringify(value));
-    this.setState({
-      idAtual: localStorage.getItem("idCategory").replace(/"/g, ""),
-    });
+    localStorage.setItem('idCategory', JSON.stringify(value));
 
-    await resultadoCategoriaPEsquisa();
+    const { pesquisa } = this.props;
+    pesquisa();
   };
 
   render() {
-    const { resultadoCategoria, idAtual } = this.state;
+    const { resultadoCategoria } = this.state;
+    const { categoriaAtual } = this.props;
     return (
       <div class="list-group tamanho">
         {resultadoCategoria.map(({ id, name }) => (
           <button
             type="button"
             className={
-              idAtual === id
-                ? "list-group-item list-group-item-action active"
-                : "list-group-item list-group-item-action"
+              categoriaAtual === id
+                ? 'list-group-item list-group-item-action active'
+                : 'list-group-item list-group-item-action'
             }
             aria-current="true"
             key={id}

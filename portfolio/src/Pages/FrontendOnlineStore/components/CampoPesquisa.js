@@ -1,13 +1,12 @@
-import { Component } from "react";
-import { resultadoCategoriaPEsquisa } from "../API";
-import "../CSS/CampoPesquisa.css";
+import { Component } from 'react';
+import '../CSS/CampoPesquisa.css';
 
 export default class CampoPesquisa extends Component {
   constructor() {
     super();
 
     this.state = {
-      inputValue: "",
+      inputValue: '',
     };
   }
 
@@ -15,7 +14,14 @@ export default class CampoPesquisa extends Component {
     this.setState({ inputValue: value });
 
     // guarda o valor do input no local Storage
-    localStorage.setItem("Input", JSON.stringify(value));
+    localStorage.setItem('Input', JSON.stringify(value));
+  };
+
+  limpar = () => {
+    // localStorage.removeItem('idCategory');
+    localStorage.setItem('idCategory', '');
+    const { pesquisa } = this.props;
+    pesquisa();
   };
 
   render() {
@@ -38,7 +44,7 @@ export default class CampoPesquisa extends Component {
               />
               <button
                 className="input-group-text"
-                onClick={() => resultadoCategoriaPEsquisa()}
+                onClick={() => this.limpar()}
               >
                 Pesquisar
               </button>

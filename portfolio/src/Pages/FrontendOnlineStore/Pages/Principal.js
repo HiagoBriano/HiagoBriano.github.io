@@ -1,6 +1,9 @@
-import { Component } from "react";
-import CampoPesquisa from "../components/CampoPesquisa";
-import Categorias from "../components/Categorias";
+import { Component } from 'react';
+import CampoPesquisa from '../components/CampoPesquisa';
+import Categorias from '../components/Categorias';
+import Resultados from '../components/Resultados';
+import { resultadoCategoriaPEsquisa } from '../API';
+import '../CSS/Principal.css';
 
 export default class Principal extends Component {
   constructor() {
@@ -8,19 +11,36 @@ export default class Principal extends Component {
 
     this.state = {
       resultadoPesquisa: [],
+      categoriaAtual: '',
     };
   }
 
+  // pega o resultado da pesquisa
+  pesquisa = async () => {
+    const resultado = await resultadoCategoriaPEsquisa();
+
+    this.setState({
+      resultadoPesquisa: resultado.results,
+    });
+
+    this.setState({
+      categoriaAtual: localStorage.getItem('idCategory').replace(/"/g, ''),
+    });
+  };
+
   render() {
+    const { resultadoPesquisa, categoriaAtual } = this.state;
     return (
       <>
-        <CampoPesquisa />
-        <Categorias />
+        <CampoPesquisa pesquisa={this.pesquisa} />
+        <div className="ladoPrincipal">
+          <Categorias
+            pesquisa={this.pesquisa}
+            categoriaAtual={categoriaAtual}
+          />
+          <Resultados resultadoPesquisa={resultadoPesquisa} />
+        </div>
       </>
     );
   }
 }
-
-// se mostrarResultado for verdadeiro mostrar a tela com o resultado, se for falso ele deixa mostrar a tela de detalhes
-
-// criar um botão para limpar a busca e limpar a categoria (antes da listagem da categoria)
