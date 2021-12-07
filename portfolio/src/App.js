@@ -4,19 +4,18 @@ import { Route, Switch } from 'react-router';
 import IndexPrincipal from './Pages/Principal/IndexPrincipal';
 import IndexProjeto12 from './Pages/FrontendOnlineStore/IndexProjeto12';
 
-
 function App() {
   return (
-    <BrowserRouter>
-        <Switch>
-          <Route path="/" exact>
-              <IndexPrincipal />
-            </Route>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Switch>
+        <Route path="/" exact>
+          <IndexPrincipal />
+        </Route>
 
-            <Route path="/frontendonlinestore" exact>
-              <IndexProjeto12 />
-            </Route>
-        </Switch>
+        <Route path="/frontendonlinestore" exact>
+          <IndexProjeto12 />
+        </Route>
+      </Switch>
     </BrowserRouter>
   );
 }

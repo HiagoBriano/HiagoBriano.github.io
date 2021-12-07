@@ -10,7 +10,7 @@ export default class IndexProjeto12 extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route path="/frontendonlinestore" exact>
             <Principal />
