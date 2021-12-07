@@ -1,0 +1,36 @@
+.selecionado {
+  background-color: rgb(128, 128, 128);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+#rodape {
+  background-color: rgb(203, 228, 135);
+  color: rgb(12, 41, 66);
+  font-size: 20px;
+  text-align: center;
+  width: 99%;
+  margin: auto;
+  bottom:0;
+  position: fixed;
+}
+
+.text-center { 
+  padding-top: 30px;
+}
+
+.centralizar {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding-top: 15px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}

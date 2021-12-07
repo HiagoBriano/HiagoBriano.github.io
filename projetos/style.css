@@ -1,0 +1,13 @@
+body {
+  background-image: url("fundo.jpg");
+  background-size: 1000% 1000%;
+}
+
+header {
+  padding-top: 30px;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
