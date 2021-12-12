@@ -6,18 +6,13 @@
   text-decoration: line-through;
 }
 
-#rodape {
-  background-color: rgb(203, 228, 135);
-  color: rgb(12, 41, 66);
-  font-size: 20px;
-  text-align: center;
-  width: 99%;
-  margin: auto;
-  bottom:0;
+.footer {
+  width: 100%;
+  bottom: 0;
   position: fixed;
 }
 
-.text-center { 
+.text-center {
   padding-top: 30px;
 }
 
@@ -32,5 +27,4 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
