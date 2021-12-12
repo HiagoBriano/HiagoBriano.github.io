@@ -5,6 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paleta de Cores</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +21,7 @@
     <div class="color corYellow"></div>
   </div>
   <br>
-  <button type="button" id="clear-board">Limpar</button>
+  <button type="button" id="clear-board" class="btn btn-secondary btn-sm">Limpar</button>
   
   <!-- Tamanho do quadrado e limitação de caracter no site:
   https://pt.stackoverflow.com/questions/382472/input-cpf-e-telefone-aceitar-s%C3%B3-numero 
@@ -25,21 +29,46 @@
     aceitar numero positivos pelo site:
     https://www.ti-enxame.com/pt/html/como-tornar-type-number-apenas-para-numeros-positivos/1041901479/-->
 
-  <input type="number" min="1" step="1" id="board-size" placeholder="numero entre 5 e 50" > 
+  <input type="number" min="1" step="1" id="board-size" placeholder="numero entre 5 e 20" style="height: 32px"> 
 
-  <button type="button" id="generate-board">VQV</button>
+  <button type="button" id="generate-board" class="btn btn-secondary btn-sm">VQV</button >
 
 <!-- procurei como fazer botão no site: https://www.w3schools.com/tags/tag_button.asp -->
   <br><br>
   <div id="pixel-board">
  
   </div>
-  <br><br><br>
-  <footer id="rodape">
-    Desenvolvido por Hiago Briano - Turma16 da Trybe
-    <br>
-    <a href="leia/" target="_blank">Clique aqui para ver os requisitos desse projeto</a>
-</footer>
+
+  <div class="espaco">
+ 
+  </div>
+
+<div class="card-body text-white bg-secondary footer">
+  <blockquote class="blockquote mb-0 text-center ">
+    <p>Projeto idealizado pela Trybe</p>
+    <footer class="blockquote-footer text-white">
+      Feito por Hiago Briano <br />
+      <a
+        href="https://www.linkedin.com/in/hiago-briano/"
+        target="_blank"
+        class="badge bg-primary link"
+        rel="noreferrer"
+        style="text-decoration: none"
+      >
+        Linkedin
+      </a>
+      <a
+        href="https://github.com/HiagoBriano"
+        target="_blank"
+        class="badge bg-dark link"
+        rel="noreferrer"
+        style="text-decoration: none"
+      >
+        GitHub
+      </a>
+    </footer>
+  </blockquote>
+</div>
 
 
   <script type="text/javascript" src="script.js"></script>
