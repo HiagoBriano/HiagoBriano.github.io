@@ -77,7 +77,7 @@ hr {
   padding-right: 10px;
 }
 
-.radio div{
+.radio div {
   padding-left: 10px;
 }
 
@@ -97,17 +97,17 @@ textarea {
 }
 
 body {
-  background-color: #EFEFEF;
+  background-color: #efefef;
 }
 
 .btn-secondary {
-  background-color: #4E2C83;
+  background-color: #4e2c83;
 }
 
 .card {
-  background-color: #3C404A;
+  background-color: #3c404a;
   color: white;
-  bottom:0;
+  bottom: 0;
   width: 100%;
   position: fixed;
 }
@@ -120,4 +120,10 @@ h2 {
 
 .espaco {
   height: 30px;
+}
+
+.footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
 }
